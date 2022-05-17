@@ -1,12 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Home from './pages/Home.js';
+import User from './pages/User.js';
+import CharacterComments from './pages/CharacterComments.js';
+import Navbar from './components/Navbar';
+import './styling/Home.css';
+import './styling/Navbar.css';
+import './styling/User.css';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Navbar/>
+      <Switch>
+        <Route path="/" component={Home} exact/>
+        <Route path="/user" component={User}/>
+        <Route path="/character-comments/:characterId" component={CharacterComments}/>
+      </Switch>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

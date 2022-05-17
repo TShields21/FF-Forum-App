@@ -1,0 +1,23 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navItem {
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 100px;
+    width: 33%;
+    background-color: pink;
+    border-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav :hover {
+    background-color: gray;
+    color: white;
+    border-color: white;
+}
